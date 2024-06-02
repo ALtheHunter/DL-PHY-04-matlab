@@ -2,26 +2,26 @@
 % A detailed description of the parameters is available on DeepMIMO.net
 
 %Ray-tracing scenario
-params.scenario = 'O1_60';          % The adopted ray tracing scenario [check the available scenarios at https://deepmimo.net/scenarios/]
+params.scenario = 'O1_28';          % The adopted ray tracing scenario [check the available scenarios at https://deepmimo.net/scenarios/]
 
 %Dynamic Scenario Scenes [only for dynamic (multiple-scene) scenarios]
 params.scene_first = 1;
 params.scene_last = 1;
 
 % Active base stations
-params.active_BS = [1];             % Includes the numbers of the active BSs (values from 1-18 for 'O1')(check the scenario description at https://deepmimo.net/scenarios/ for the BS numbers) 
+params.active_BS = [3];             % Includes the numbers of the active BSs (values from 1-18 for 'O1')(check the scenario description at https://deepmimo.net/scenarios/ for the BS numbers) 
 
 % Active users
-params.active_user_first = 1;       % The first row of the considered user section (check the scenario description for the user row map)
-params.active_user_last = 44;       % The last row of the considered user section (check the scenario description for the user row map)
+params.active_user_first = 2752;       % The first row of the considered user section (check the scenario description for the user row map)
+params.active_user_last = 3852;       % The last row of the considered user section (check the scenario description for the user row map)
 
 % Subsampling of active users
 %--> Setting both subsampling parameters to 1 activate all the users indicated previously
 params.row_subsampling = 1;         % Randomly select round(row_subsampling*(active_user_last-params.active_user_first)) rows
-params.user_subsampling = 1;        % Randomly select round(user_subsampling*number_of_users_in_row) users in each row
+params.user_subsampling = 0.8;        % Randomly select round(user_subsampling*number_of_users_in_row) users in each row
 
 % Antenna array dimensions
-params.num_ant_BS = [8, 1];      % Horizontal - Vertical
+params.num_ant_BS = [32, 1];      % Horizontal - Vertical
 params.num_ant_UE = [1, 1];      % Horizontal - Vertical
 
 params.FoV_ant_BS = [180, 180]; % Degrees in horizontal-vertical Max- 360 180
